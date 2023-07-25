@@ -26,5 +26,8 @@ public class MaxConsecutiveOnes2 {
         int[] nums1 = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k1 = 2;
         System.out.println(m.longestOnes(nums1, k1));
+        int[] nums2 = {0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1};
+        int k2 = 3;
+        System.out.println(m.longestOnes(nums2, k2));
     }
 }
