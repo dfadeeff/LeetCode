@@ -4,7 +4,6 @@ public class MaxConsecutiveOnes2 {
     public int longestOnes(int[] nums, int k) {
         //window.count("0") <= 1
         int left = 0;
-
         //curr that keeps track of how many "0" we currently have in our window.
         int curr = 0;
         int ans = 0;
@@ -20,7 +19,6 @@ public class MaxConsecutiveOnes2 {
             }
             ans = Math.max(ans, right - left + 1);
         }
-
         return ans;
     }
 
