@@ -31,10 +31,27 @@ public class CheckAllCharsEqualNumber {
         CheckAllCharsEqualNumber c = new CheckAllCharsEqualNumber();
         String s1 = "abacbc";
         System.out.println(c.areOccurrencesEqual(s1));
+        System.out.println(c.areOccurrencesEqualSet(s1));
         String s2 = "aaabb";
         System.out.println(c.areOccurrencesEqual(s2));
+        System.out.println(c.areOccurrencesEqualSet(s2));
         String s3 = "mmmccmcccccmcccccmmmcmccmmccccmmmcmmcmcmcmcmmmmmmmmmcccmmcmmmcmmcmcmcmmmcmmmcmmccccmcmccmmcmccmmmcmmccccmcmmccmcmmcccmmcmmcmmcmccmmccmcmmcmmccmmccmcccmmcccmmcccccmcmmmmcmccmmmmmmcmmccmccmmcccccccccmcccmmmccmmccccmmcmcmcmcmmcmmcmcmcmccccmmcccmmmccmmcmmmcmmmcmccccmcmcccmmccmm";
         System.out.println(c.areOccurrencesEqual(s3));
+        System.out.println(c.areOccurrencesEqualSet(s3));
+    }
+
+
+    public boolean areOccurrencesEqualSet(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (Character c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        Set<Integer> set = new HashSet<>();
+        for (Character key : map.keySet()) {
+            set.add(map.get(key));
+        }
+        return set.size() == 1;
     }
 
 }
