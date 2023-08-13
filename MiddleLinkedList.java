@@ -10,7 +10,6 @@ public class MiddleLinkedList {
             fast = fast.next.next;
         }
         return slow;
-
     }
 
     public static void main(String[] args) {
