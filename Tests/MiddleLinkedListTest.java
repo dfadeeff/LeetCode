@@ -1,5 +1,7 @@
-package CrashCourse;
+package CrashCourse.Tests;
 
+import CrashCourse.ListNode;
+import CrashCourse.MiddleLinkedList;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

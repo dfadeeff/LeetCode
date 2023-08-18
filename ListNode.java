@@ -1,13 +1,13 @@
 package CrashCourse;
 
 public class ListNode {
-    int val;
-    CrashCourse.ListNode next;
+    public int val;
+    public CrashCourse.ListNode next;
 
     ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
